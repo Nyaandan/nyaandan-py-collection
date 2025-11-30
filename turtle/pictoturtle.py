@@ -13,8 +13,8 @@ Controls:
 
 import sys
 import turtle
-import controls
 from controls import *
+import controls
 from utils import vector_to_angle
 
 def pressEnd():
