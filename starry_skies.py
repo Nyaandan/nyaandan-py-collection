@@ -1,4 +1,8 @@
-from turtle import *
+"""
+Draw random points and lines that resemble stars in the night sky.
+"""
+
+import turtle
 import random
 import time
 
@@ -7,8 +11,8 @@ star_colors = ["ivory", "gold", "cyan"]
 max_density = 4
 size_min = 6
 size_max = 12
-half_width = round(window_width()/2)
-half_height = round(window_height()/2)
+half_width = round(turtle.window_width()/2)
+half_height = round(turtle.window_height()/2)
 anim_speed = 0
 stars_to_draw = 0
 
@@ -20,8 +24,8 @@ def random_position():
 
 def draw_star(x, y, size):
     global stars_to_draw
-    goto(x, y)
-    dot(size)
+    turtle.goto(x, y)
+    turtle.dot(size)
     stars_to_draw -= 1
 
 def draw_random_star():
@@ -32,27 +36,27 @@ def draw_random_star():
 # A constellation is a collection of stars connected by a line
 def draw_constellation(stars):
     global stars_to_draw
-    color(random.choice(star_colors))
+    turtle.color(random.choice(star_colors))
 
-    pendown()
+    turtle.pendown()
     # Draw the first star at the initial position
-    dot(random.randint(size_min, size_max))
+    turtle.dot(random.randint(size_min, size_max))
     stars_to_draw -= 1
     for s in range(1, stars):
         draw_random_star()
-    penup()
+    turtle.penup()
 
 def paint_sky(star_count):
     global stars_to_draw
     stars_to_draw = star_count
-    bgcolor(sky_color)
-    speed(anim_speed)
-    hideturtle()
+    turtle.bgcolor(sky_color)
+    turtle.speed(anim_speed)
+    turtle.hideturtle()
 
     while(stars_to_draw > 0):
         # Gives a random initial position to each constellation
         new_pos = random_position()
-        goto(new_pos[0], new_pos[1])
+        turtle.goto(new_pos[0], new_pos[1])
         stars = random.randint(1, min(stars_to_draw, max_density))
         draw_constellation(stars)
 
@@ -62,14 +66,14 @@ def benchmark(reps, stars):
     time_debut = time.time()
     time_last = time_debut
     for _ in range(reps):
-        clear()
+        turtle.clear()
         paint_sky(stars)
         times.append(time.time() - time_last)
         time_last = time.time()
     print("total:", time.time() - time_debut)
     print("avg:", sum(times)/ len(times))
 
-penup()
+turtle.penup()
 paint_sky(24)
 #benchmark(12, 24)
-done()
+turtle.done()
