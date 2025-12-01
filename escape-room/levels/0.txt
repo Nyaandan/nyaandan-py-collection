@@ -1,0 +1,30 @@
+731
+***
+You wake up in an unknown room. Looking around, you notice that several objects seem out of place. A door behind you holds a sign that says:
+'Guess the code :)'
+You take another look at the room, and start investigating... You can either look, smell, or touch objects. Please don't put anything in your mouth.
+***
+Sweater
+It's a blue sweater that had the number 12 stitched on it.
+Someone has unstitched the second number, leaving only the 1.
+The sweater smells of laundry detergent.
+---
+Chair
+It's a wooden chair with only 3 legs.
+Someone had deliberately snapped off one of the legs.
+It smells like old wood.
+---
+Journal
+The final entry states that time should be hours then minutes then seconds (H-M-S).
+The cover is worn and several pages are missing.
+It smells like musty leather.
+---
+Bowl of soup
+It appears to be tomato soup.
+It has cooled down to room temperature.
+You detect 7 different herbs and spices.
+---
+Clock
+The hour hand is pointing towards the soup, the minute hand towards the chair, and the second hand towards the sweater.
+The battery compartment is open and empty.
+It smells of plastic.

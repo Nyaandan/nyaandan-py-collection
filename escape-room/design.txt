@@ -1,0 +1,19 @@
+ESCAPE ROOM PROJECT 
+
+== DEFINITION ==
+
+* Objects in the room
+* Need a code to escape
+* Objects give clues about the code
+* Player can look, smell, or touch items to gain information
+* Info includes flavor, lore, and actual clues
+
+== DESIGN ==
+
+* Text-based
+* Runs in terminal, using prompts and inputs
+* Ends when win or lose (or quit)
+* Components
+	* Game
+	* Room
+	* Item

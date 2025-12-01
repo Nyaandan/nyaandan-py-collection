@@ -8,4 +8,8 @@ A simple turtle drawing program controlled with the keyboard.
 Draws random points and lines that looks like a stars-filled night sky!
 
 ### pixelexil
-A simple application for pixel art creation and manipulation.
+A simple application for pixel art creation and manipulation using tkinter and Pillow.
+Projects are saved in json format, and can be exported as png.
+
+### escape-room
+A simple text-based escape room game where the player must interact with objects in a room to find the correct code to escape.
