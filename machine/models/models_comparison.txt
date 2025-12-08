@@ -1,0 +1,16 @@
+Kept			  Model			 Loss		 Accuracy
+			unbatched-1			0.076			0.977
+			unbatched-2			0.072			0.981
+			unbatched-3			0.082			0.981
+			unbatched-4			0.094			0.981
+  x			unbatched-5			0.092			0.983
+  x			 batch-32-1			0.096			0.983
+			 batch-32-2			0.109			0.982
+			 batch-32-3			0.110			0.982
+			 batch-32-4			0.122			0.981
+			 batch-32-5			0.120			0.982
+			 batch-64-1			0.124			0.982
+			 batch-64-2			0.127			0.981
+  x			 batch-64-3			0.125			0.983
+			 batch-64-4			0.143			0.981
+			 batch-64-5			0.160			0.980

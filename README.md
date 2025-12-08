@@ -13,3 +13,6 @@ Projects are saved in json format, and can be exported as png.
 
 ### escape-room
 A simple text-based escape room game where the player must interact with objects in a room to find the correct code to escape.
+
+### machine
+A image recognition project using MNIST training data. A first step into machine learning.
