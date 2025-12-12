@@ -57,22 +57,23 @@ class SampleLoader():
         img_array = np.array(img.resize(shape))
         return img_array
 
-test_env = ImageRecognitionTesting()    
-model_path = "models/unbatched.keras"
-model = ModelManager.load_model(model_path)
-expected_shape = (1, 28, 28)
-test_env.load_model(model, expected_shape)
-template_path = "new_data/{}.png"
-while True:
-    cmd = input("Data path: ")
-    if cmd == "break":
-        break
-    sample_path = template_path.format(cmd)
-    try:
-        sample = SampleLoader.load_sample(sample_path, (28, 28))
-    except FileNotFoundError:
-        print(f"Not found: {sample_path}")
-        continue
-    p, res = test_env(sample)
-    print(p)
-    print(res)
+if __name__ == "__main__":
+    test_env = ImageRecognitionTesting()    
+    model_path = "models/unbatched.keras"
+    model = ModelManager.load_model(model_path)
+    expected_shape = (1, 28, 28)
+    test_env.load_model(model, expected_shape)
+    template_path = "new_data/{}.png"
+    while True:
+        cmd = input("Data path: ")
+        if cmd == "break":
+            break
+        sample_path = template_path.format(cmd)
+        try:
+            sample = SampleLoader.load_sample(sample_path, (28, 28))
+        except FileNotFoundError:
+            print(f"Not found: {sample_path}")
+            continue
+        p, res = test_env(sample)
+        print(p)
+        print(res)
